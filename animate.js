@@ -70,7 +70,8 @@ function load_model(){
   if (moSel.value == '') {
     return
   }
-  let allModelUrl = './assets/generated_motions/' + moSel.value + '.glb';
+  // let allModelUrl = './assets/generated_motions/' + moSel.value + '.glb';
+  let allModelUrl = 'https://github.com/yuhuangyue/MetaScenes.github.io/releases/download/v1.0.0/scene0679_00_ani.glb'
 
   scene.remove(model)
   document.querySelector('#motion_loading').innerHTML = `<img src="./assets/icons/loading.svg" width="48" height="48">`

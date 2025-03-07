@@ -64,18 +64,21 @@
 
 
 <body>
-  <section class="hero">
+
+  <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('static/images/bar.png') center/cover no-repeat;">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">METASCENES: Towards Automated Replica Creation for Real-world 3D Scans</h1>
 
-            <div class="is-size-4 publication-authors">
-              <p><span class="author-block"><strong>CVPR 2025</strong></span></p>
-            </div>
+            <h1 class="title is-1 has-text-white" style="font-size: 4rem;">
+              METASCENES: Towards Automated Replica Creation for Real-world 3D Scans</h1>
 
-            <div class="is-size-5 publication-authors">
+<!--            <div class="is-size-4 publication-authors" style=" margin-top: 0;">-->
+<!--              <span style="background-color: #e91e63; color: white; padding: 5px;">CVPR 2025</span>-->
+<!--            </div>-->
+
+            <div class="is-size-5 publication-authors" style="">
               <span class="author-block">
                 <a href="https://metascenes.github.io/">Huangyue Yu</a><sup>1</sup>,</span>
               <span class="author-block">
@@ -112,13 +115,19 @@
               </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors" style="">
               <span class="author-block"><sup>1</sup>National Key Laboratory of General Artificial Intelligence, BIGAI,</span>
               <span class="author-block"><sup>2</sup>School of Computer Science & Technology, Beijing Institute of Technology,</span>
             </div>
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="column has-text-centered">
+
+  <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
@@ -130,15 +139,15 @@
                     <span>Paper</span>
                   </a>
                 </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2403.12835"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
+<!--                <span class="link-block">-->
+<!--                  <a href="https://arxiv.org/abs/2403.12835"-->
+<!--                     class="external-link button is-normal is-rounded is-dark">-->
+<!--                    <span class="icon">-->
+<!--                        <i class="ai ai-arxiv"></i>-->
+<!--                    </span>-->
+<!--                    <span>arXiv</span>-->
+<!--                  </a>-->
+<!--                </span>-->
                 <!-- Video Link. -->
                 <span class="link-block">
                   <a href="https://www.youtube.com/watch?v=QojOdY2_dTQ"
@@ -159,7 +168,7 @@
                     <span>Code</span>
                     </a>
                 </span>
-                <!-- Dataset Link.
+                <!-- Dataset Link.-->
                 <span class="link-block">
                   <a href="https://github.com/google/nerfies/releases/tag/0.1"
                      class="external-link button is-normal is-rounded is-dark">
@@ -167,32 +176,11 @@
                         <i class="far fa-images"></i>
                     </span>
                     <span>Data</span>
-                    </a> -->
+                    </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-<!-- Teaser demo -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="video-container">
-        <video id="teaser-video" autoplay muted loop playsinline style="width: 100%; height: auto;">
-          <source src="./static/videos/demo_output.mp4" type="video/mp4">
-          <p>Your browser does not support HTML video. <a href="./static/videos/teaser.mp4">Download the video</a> instead.</p>
-        </video>
-      </div>
-      <h2 class="subtitle has-text-centered">
-        Automated replica creation, 3D indoor scene datasets, and sim-to-real transfer.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser demo -->
+
 
 <!-- Paper abstract -->
 <section class="hero is-small">
@@ -208,6 +196,22 @@
           </div>
         </div>
       </div>
+
+      <!-- Teaser demo -->
+
+    <div class="hero-body">
+      <div class="video-container">
+        <video id="teaser-video" autoplay muted loop playsinline style="width: 100%; height: auto;">
+          <source src="./static/videos/demo_output.mp4" type="video/mp4">
+          <p>Your browser does not support HTML video. <a href="./static/videos/teaser.mp4">Download the video</a> instead.</p>
+        </video>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Automated replica creation, 3D indoor scene datasets, and sim-to-real transfer.
+      </h2>
+    </div>
+
+<!-- End teaser demo -->
 
       <!-- Dataset -->
       <div class="columns is-centered has-text-centered">

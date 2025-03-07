@@ -68,6 +68,7 @@ body {
 }
 
 .publication-authors {
+    color: white !important;
 }
 
 .publication-authors a {
@@ -78,9 +79,6 @@ body {
     text-decoration: underline;
 }
 
-.author-block {
-  display: inline-block;
-}
 
 .publication-banner img {
 }
@@ -172,10 +170,11 @@ body {
 }
 
 .author-block a {
-  color: hsl(204, 86%, 53%) !important;
+  color: white !important;
 }
 
 .author-block a:hover {
+  color: #FFA800 !important;
   text-decoration: underline;
 }
 
@@ -401,3 +400,8 @@ body {
   object-fit: cover; /* 裁剪方式为覆盖整个容器 */
   border-radius: 5px; /* 添加圆角效果 */
 }
+
+.title {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.6), 0 0 2px rgba(255, 255, 255, 0.4);*/
+}
+

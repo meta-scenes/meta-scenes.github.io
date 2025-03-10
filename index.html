@@ -65,7 +65,22 @@
 
 <body>
 
-  <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('static/images/bar.png') center/cover no-repeat;">
+  <section class="hero" style="position: relative; overflow: hidden;">
+
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+
+    <video autoplay muted loop playsinline
+           style="width: 100%; height: 100%; object-fit: cover;">
+      <source src="static/videos/bar_tight.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));">
+    </div>
+  </div>
+
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -200,12 +215,15 @@
       <!-- Teaser demo -->
 
     <div class="hero-body">
-      <div class="video-container">
-        <video id="teaser-video" autoplay muted loop playsinline style="width: 100%; height: auto;">
-          <source src="./static/videos/demo_output.mp4" type="video/mp4">
-          <p>Your browser does not support HTML video. <a href="./static/videos/teaser.mp4">Download the video</a> instead.</p>
-        </video>
+      <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://www.youtube.com/embed/6C5lox9gWPs?autoplay=1&mute=1&loop=1&playlist=6C5lox9gWPs"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
       </div>
+
       <h2 class="subtitle has-text-centered">
         Automated replica creation, 3D indoor scene datasets, and sim-to-real transfer.
       </h2>
@@ -236,40 +254,60 @@
 <!-- 3D demo-->
 <section class="hero is-small">
   <div class="hero-body">
-    <div id="teaser-demo" class="container is-max-desktop">
-      <div class="has-text-centered">
-        <h2 class="title is-4" style="text-align: left;">3D Visualization</h2>
-        <!-- <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2> -->
-        <h2 class="subtitle" style="text-align: left; font-size: 1.0em; color: rgb(219, 54, 32);">
-          <b>Note</b>: <b>Select</b> a scene from dropdown and <b>drag</b> to move your view.
-        </h2>
-      </div>
-      <br />
-      <!-- <div class="carousel demo-carousel"> -->
-      <div class="demo-carousel">
-        <div class="item has-text-centered">
-          <div style="position: absolute; left: 5%;">
-            <span style="font-size: 1.2em;"><b>Scenes</b> </span>
-            <div class="select is-small">
-              <select id="motionSelector">
-                <option>scene0679_00</option>
-              </select>
-            </div>
-          </div>
-          <div id="motion_loading" style="position: absolute; left: 50%; top: 45%;"></div>
-          <canvas id="canvas1" class="webgl" style="height: 100%; width: 100%;"></canvas>
-        </div>
-      </div>
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-4 ">3D Visualization</h2>
+      <h2 class="subtitle" style="font-size: 1.0em; color: rgb(219, 54, 32);">
+        <b>Note</b>: Interactive 3D scene viewer. Click the button below to explore.
+      </h2>
+
+      <!-- 按钮触发弹窗 -->
+      <button class="button is-primary" id="openModalBtn">Open Scene Viewer</button>
+
     </div>
   </div>
 </section>
+
+  <!-- Modal 弹出框 -->
+<div class="modal" id="sceneModal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box has-text-centered">
+      <h2 class="title is-4">3D Visualization</h2>
+      <p style="margin-bottom: 1em;">Explore interactive 3D scenes in a dedicated viewer.</p>
+      <a href="viewer.html" class="button is-link">Launch Viewer</a>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("sceneModal");
+    const openBtn = document.getElementById("openModalBtn");
+    const closeBtn = modal.querySelector(".modal-close");
+    const modalBg = modal.querySelector(".modal-background");
+
+    openBtn.addEventListener("click", () => {
+      modal.classList.add("is-active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("is-active");
+    });
+
+    modalBg.addEventListener("click", () => {
+      modal.classList.remove("is-active");
+    });
+  });
+</script>
+
 <!-- End 3D demo-->
 
 <section class="hero is-small">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
       <div class="column is-6">
-        <h2 class="title is-4" style="text-align: left;">Real2Sim Comparison</h2>
+        <h2 class="title is-4">Real2Sim Comparison</h2>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
             <div class="bal-block">
@@ -584,11 +622,11 @@
     <div class="has-text-centered">
       <h2 class="title is-3">BibTeX</h2>
     </div>
-    <pre><code>@inproceedings{cui2024anyskill,
-  title={Anyskill: Learning Open-Vocabulary Physical Skill for Interactive Agents},
-  author={Cui, Jieming and Liu, Tengyu and Liu, Nian and Yang, Yaodong and Zhu, Yixin and Huang, Siyuan},
+    <pre><code>@inproceedings{yu2025metascenes,
+  title={METASCENES: Towards Automated Replica Creation for Real-world 3D Scans},
+  author={Huangyue Yu, Baoxiong Jia, Yixin Chen, Yandan Yang, Puhao Li, Rongpeng Su, Jiaxin Li, Qing Li, Wei Liang, Zhu Song-Chun, Tengyu Liu, Siyuan Huang},
   booktitle=Conference on Computer Vision and Pattern Recognition(CVPR),
-  year={2024}
+  year={2025}
 }</code></pre>
   </div>
 </section>

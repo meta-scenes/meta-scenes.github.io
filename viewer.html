@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Open-Vocabulary, Physical skill, Interactive agent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>METASCENES: Towards Automated Replica Creation for Real-world 3D Scans</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+<!--  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">-->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<!--  <script defer src="static/js/fontawesome.all.min.js"></script>-->
+  <script src="https://kit.fontawesome.com/d383128d10.js" crossorigin="anonymous"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+        "three": "https://unpkg.com/three@0.127.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.127.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC36P9N5PB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KC36P9N5PB');
+</script>
+
+<body>
+
+
+
+<!-- 3D demo-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div id="teaser-demo" class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-4" style="text-align: left;">3D Visualization</h2>
+        <!-- <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2> -->
+        <h2 class="subtitle" style="text-align: left; font-size: 1.0em; color: rgb(219, 54, 32);">
+          <b>Note</b>: <b>Select</b> a scene from dropdown and <b>drag</b> to move your view.
+        </h2>
+      </div>
+      <br />
+      <!-- <div class="carousel demo-carousel"> -->
+      <div class="demo-carousel">
+        <div class="item has-text-centered">
+          <div style="position: absolute; left: 5%;">
+            <span style="font-size: 1.2em;"><b>Scenes</b> </span>
+            <div class="select is-small">
+              <select id="motionSelector">
+                <option>scene0679_00</option>
+              </select>
+            </div>
+          </div>
+          <div id="motion_loading" style="position: absolute; left: 50%; top: 45%;"></div>
+          <canvas id="canvas1" class="webgl" style="height: 100%; width: 100%;"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End 3D demo-->
+
+
+
+
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="has-text-centered">
+      <h2 class="title is-3">BibTeX</h2>
+    </div>
+    <pre><code>@inproceedings{yu2025metascenes,
+  title={METASCENES: Towards Automated Replica Creation for Real-world 3D Scans},
+  author={Huangyue Yu, Baoxiong Jia, Yixin Chen, Yandan Yang, Puhao Li, Rongpeng Su, Jiaxin Li, Qing Li, Wei Liang, Zhu Song-Chun, Tengyu Liu, Siyuan Huang},
+  booktitle=Conference on Computer Vision and Pattern Recognition(CVPR),
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the template of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+<script src="./animate.js" type="module"></script>
+
+
+</body>
+
+
+
+<script>
+  new BeforeAfter({id: '#h3d-one'});
+  new BeforeAfter({id: '#h3d-two'});
+  // new BeforeAfter({id: '#h3d-three'});
+  // new BeforeAfter({id: '#h3d-four'});
+  // new BeforeAfter({id: '#h3d-five'});
+  // new BeforeAfter({id: '#h3d-six'});
+</script>
+
+</html>

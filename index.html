@@ -106,19 +106,19 @@
                 <a href="https://github.com/YandanYang">Yandan Yang</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://xiaoyao-li.github.io/">Puhao Li</a><sup>1</sup>,
+                <a href="https://xiaoyao-li.github.io/">Puhao Li</a><sup>1,3</sup>,
               </span>
               <span class="author-block">
-                <a href="https://metascenes.github.io/">Rongpeng Su</a><sup>1</sup>,
+                <a href="https://metascenes.github.io/">Rongpeng Su</a><sup>1,4</sup>,
               </span>
               <span class="author-block">
-                <a href="https://metascenes.github.io/">Jiaxin Li</a><sup>1</sup>,
+                <a href="https://metascenes.github.io/">Jiaxin Li</a><sup>1,2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://liqing.io/">Qing Li</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://liangwei-bit.github.io/web/">Wei Liang</a><sup>1</sup>,
+                <a href="https://liangwei-bit.github.io/web/">Wei Liang</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://zhusongchun.net/">Zhu Song-Chun</a><sup>1</sup>,
@@ -133,6 +133,8 @@
             <div class="is-size-5 publication-authors" style="">
               <span class="author-block"><sup>1</sup>National Key Laboratory of General Artificial Intelligence, BIGAI,</span>
               <span class="author-block"><sup>2</sup>School of Computer Science & Technology, Beijing Institute of Technology,</span>
+              <span class="author-block"><sup>3</sup>Dept. of Automation, Tsinghua University,</span>
+              <span class="author-block"><sup>4</sup>School of Information Science & Technology, University of Science and Technology of China</span>
             </div>
 
           </div>
@@ -146,7 +148,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2403.12835"
+                  <a href=""
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -165,7 +167,7 @@
 <!--                </span>-->
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=QojOdY2_dTQ"
+                  <a href="https://www.youtube.com/watch?v=6C5lox9gWPs"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fab fa-youtube"></i>
@@ -175,7 +177,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/jiemingcui/anyskill"
+                  <a href=""
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fab fa-github"></i>
@@ -185,7 +187,7 @@
                 </span>
                 <!-- Dataset Link.-->
                 <span class="link-block">
-                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                  <a href=""
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="far fa-images"></i>
@@ -236,7 +238,10 @@
         <div class="column is-full">
           <h2 class="title is-3">&#127969;Dataset</h2>
           <div class="publication-gif">
-            <img src="./static/videos/dataset.gif" alt="Dataset GIF" style="width: 100%">
+            <video autoplay muted loop playsinline style="width: 100%;" controls>
+              <source src="./static/videos/dataset.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
               <p style="text-align: left;">
                 <span class="title is-6">METASCENES</span> is composed of three sequential steps: (i) Collection, where we gather diverse 3D asset candidates for each real-world object in the scan; (ii) Annotation, where annotators rank and select the best-matching 3D asset for each object based on visual similarity and geometric fit; and (iii) Optimization, where selected assets undergo post-processing and global optimization to ensure full interactivity and physical plausibility in simulation environments.
               </p>
@@ -274,7 +279,8 @@
     <div class="box has-text-centered">
       <h2 class="title is-4">3D Visualization</h2>
       <p style="margin-bottom: 1em;">Explore interactive 3D scenes in a dedicated viewer.</p>
-      <a href="viewer.html" class="button is-link">Launch Viewer</a>
+      <p style="margin-bottom: 1em;">(The following interface may take some time to load)</p>
+      <a href="viewer.html" class="button is-link" target="_blank">Launch Viewer</a>
     </div>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
@@ -355,6 +361,75 @@
             </div>
 
           </div>
+          <div class="item">
+            <div class="bal-block">
+              <div id="h3d-three" class="bal-container">
+                <div class="bal-after">
+                  <video muted autoplay="autoplay" loop="loop" height="100%">
+                    <source src="static/videos/scene0463_00_pcd.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="bal-before">
+                  <div class="bal-before-inset">
+                    <video muted autoplay="autoplay" loop="loop" height="100%">
+                      <source src="static/videos/scene0463_00.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <div class="bal-handle">
+                  <span class="handle-left-arrow"></span>
+                  <span class="handle-right-arrow"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="item">
+            <div class="bal-block">
+              <div id="h3d-four" class="bal-container">
+                <div class="bal-after">
+                  <video muted autoplay="autoplay" loop="loop" height="100%">
+                    <source src="static/videos/scene0467_00_pcd.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="bal-before">
+                  <div class="bal-before-inset">
+                    <video muted autoplay="autoplay" loop="loop" height="100%">
+                      <source src="static/videos/scene0467_00.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <div class="bal-handle">
+                  <span class="handle-left-arrow"></span>
+                  <span class="handle-right-arrow"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="item">
+            <div class="bal-block">
+              <div id="h3d-five" class="bal-container">
+                <div class="bal-after">
+                  <video muted autoplay="autoplay" loop="loop" height="100%">
+                    <source src="static/videos/scene0245_00_pcd.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="bal-before">
+                  <div class="bal-before-inset">
+                    <video muted autoplay="autoplay" loop="loop" height="100%">
+                      <source src="static/videos/scene0245_00.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <div class="bal-handle">
+                  <span class="handle-left-arrow"></span>
+                  <span class="handle-right-arrow"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
       </div>
@@ -402,7 +477,10 @@
           </div>
         </div>
         <div class="column">
-          <img src="static/videos/model.gif" width="100%">
+          <video autoplay muted loop playsinline style="width: 100%;" controls>
+            <source src="./static/videos/model.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <div class="optimal-asset">
             <h3 class="heading"><strong>Optimal asset retrieval model</strong></h3>
             <p style="text-align: left;">
@@ -511,106 +589,6 @@
     </div>
   </div>
 </section>
-<!--/ Experiments3 -->
-
-
-
-
-<!--&lt;!&ndash; Video carousel &ndash;&gt;-->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container is-max-desktop">-->
-<!--      <div class="has-text-centered">-->
-<!--        <h2 class="title is-3">More motions</h2>-->
-<!--      </div>-->
-<!--      <div class="item item-video4">-->
-<!--        <div class="item has-text-centered">-->
-<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
-<!--            <source src="static/videos/jump.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--          <h1 class="title is-4">Jump high</h1>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="item item-video3">-->
-<!--        <div class="item has-text-centered">-->
-<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
-<!--            <source src="static/videos/chacha.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--          <h1 class="title is-4">Cha-cha dance</h1>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="item item-video3">-->
-<!--        <div class="item has-text-centered">-->
-<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">-->
-<!--            <source src="static/videos/backwalk.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--          <h1 class="title is-4">Walk backwards</h1>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="item item-video3">-->
-<!--        <div class="item has-text-centered">-->
-<!--          <video poster="" id="video4" autoplay controls muted loop height="100%">-->
-<!--            <source src="static/videos/boxing.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--          <h1 class="title is-4">Boxing</h1>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End video carousel &ndash;&gt;-->
-
-
-<!--&lt;!&ndash; Small video carousel &ndash;&gt;-->
-<!--<section class="hero is-light is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-fullbody">-->
-<!--          <video poster="" id="jump" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/bow.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-steve">-->
-<!--          <video poster="" id="salsa" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/drunk_walk.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-chair-tp">-->
-<!--          <video poster="" id="waltza" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/salsa.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-shiba">-->
-<!--          <video poster="" id="yoga" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/yoga.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-fullbody">-->
-<!--          <video poster="" id="zigzag" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/zigzag.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-fullbody">-->
-<!--          <video poster="" id="zigzag" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/waltza.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End small video carousel&ndash;&gt;-->
 
 
 
@@ -665,9 +643,9 @@
 <script>
   new BeforeAfter({id: '#h3d-one'});
   new BeforeAfter({id: '#h3d-two'});
-  // new BeforeAfter({id: '#h3d-three'});
-  // new BeforeAfter({id: '#h3d-four'});
-  // new BeforeAfter({id: '#h3d-five'});
+  new BeforeAfter({id: '#h3d-three'});
+  new BeforeAfter({id: '#h3d-four'});
+  new BeforeAfter({id: '#h3d-five'});
   // new BeforeAfter({id: '#h3d-six'});
 </script>
 

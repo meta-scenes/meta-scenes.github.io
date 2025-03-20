@@ -1,7 +1,9 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import {OrbitControls} from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js';
 import {GLTFLoader} from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/DRACOLoader';
+// import { DRACOLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/DRACOLoader';
+import { DRACOLoader } from 'https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/loaders/DRACOLoader.js';
+
 
 const W_H = 16 / 9;
 const moSel = document.querySelector('#motionSelector')
@@ -67,15 +69,16 @@ function load_model(){
 
   const assetLoader = new GLTFLoader();
   assetLoader.setDRACOLoader(draco)
+
   if (moSel.value == '') {
     return
   }
   let allModelUrl = './assets/generated_motions/' + moSel.value + '.glb';
-  //let allModelUrl = 'https://github.com/yuhuangyue/MetaScenes.github.io/releases/download/v1.0.0/scene0679_00_ani.glb'
 
   scene.remove(model)
   document.querySelector('#motion_loading').innerHTML = `<img src="./assets/icons/loading.svg" width="48" height="48">`
   let modelUrl = new URL(allModelUrl, import.meta.url);
+
   assetLoader.load(modelUrl.href, function(gltf) {
     model = gltf.scene;
     scene.add(model);
